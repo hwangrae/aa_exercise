@@ -34,6 +34,7 @@ public class Rental {
 		return rentDate;
 	}
 
+
 	public void setRentDate(Date rentDate) {
 		this.rentDate = rentDate;
 	}
