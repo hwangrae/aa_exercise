@@ -81,8 +81,7 @@ public class Customer {
 		}
 
 		result += "Total charge: " + totalCharge + "\tTotal Point:" + totalPoint + "\n";
-		
-		
+
 		if ( totalPoint >= 10 ) {
 			System.out.println("Congrat! You earned one free coupon");
 		}
@@ -90,5 +89,29 @@ public class Customer {
 			System.out.println("Congrat! You earned two free coupon");
 		}
 		return result ;
+	}
+
+	public Rental getRental(String videoTitle) {
+		for ( Rental rental: rentals ) {
+			if ( rental.getVideo().getTitle().equals(videoTitle) && rental.getVideo().isRented() ) {
+				return rental;
+			}
+		}
+
+		return null;
+	}
+
+	public String getRentalsInformation()
+	{
+		StringBuffer ret = new StringBuffer();
+		ret.append("Name: " + getName());
+		ret.append("\tRentals: " + getRentals().size() + "\n");
+
+		for ( Rental rental: getRentals() ) {
+			ret.append("\tTitle: " + rental.getVideo().getTitle() + " ") ;
+			ret.append("\tPrice Code: " + rental.getVideo().getPriceCode());
+		}
+
+		return ret.toString();
 	}
 }
