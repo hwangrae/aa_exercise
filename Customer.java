@@ -81,7 +81,8 @@ public class Customer {
 		}
 
 		result += "Total charge: " + totalCharge + "\tTotal Point:" + totalPoint + "\n";
-
+		
+		
 		if ( totalPoint >= 10 ) {
 			System.out.println("Congrat! You earned one free coupon");
 		}
