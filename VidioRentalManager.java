@@ -123,9 +123,3 @@ public class VidioRentalManager {
         return customer.getReport();
     }
 }
-
-
-
-
-
-
